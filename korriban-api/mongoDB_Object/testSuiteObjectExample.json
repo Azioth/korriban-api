@@ -1,0 +1,45 @@
+
+{
+  "suite_name": "InDemand Full Regression",
+  "suite_start": "2015-07-22 08:30:02",
+  "suite_finish": "2015-07-22 09:43:33",
+  "suite_tested_url": "https://qamgmt01.indemandterp.com/",
+  "suite_passed": "18",
+  "suite_failed": "64",
+  "suite_skipped": "0",
+  "suite_total": "82",
+  "suite_tests": [
+    {
+      "test_name": "Regression",
+      "test_duration": "4410980",
+      "test_start": "2015-07-22 08:30:02",
+      "test_finish": "2015-07-22 09:43:33",
+      "test_methods": [
+        {
+          "testmethod_name": "autoLoginRefreshCart",
+          "testmethod_class":"com.indemand.automation.tests.AutoLogin",
+          "testmethod_result":"PASS",
+          "testmethod_analysis":"NOT ANALYZED",
+          "testmethod_exception":"",
+          "testmethod_ex_message":"",
+          "testmethod_duration":"57955",
+          "testmethod_start":"2015-07-22 01:34:35",
+          "testmethod_finish":"2015-07-22 01:35:32",
+          "testmethod_bug_url":""
+        },
+        {
+          "testmethod_name": "autoLoginRefreshTerp",
+          "testmethod_class":"com.indemand.automation.tests.AutoLogin",
+          "testmethod_result":"PASS",
+          "testmethod_analysis":"NOT ANALYZED",
+          "testmethod_exception":"",
+          "testmethod_ex_message":"",
+          "testmethod_duration":"57955",
+          "testmethod_start":"2015-07-22 01:34:35",
+          "testmethod_finish":"2015-07-22 01:35:32",
+          "testmethod_bug_url":""
+        }
+      ]
+    }
+  ]
+}

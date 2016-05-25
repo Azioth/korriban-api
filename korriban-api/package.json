@@ -1,0 +1,26 @@
+{
+  "name": "korriban-api",
+  "version": "1.0.0",
+  "description": "WebService to store and retrieve the automation nightly regression results in a mongo database",
+  "main": "app.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "gulp-nodemon": "^2.0.7",
+    "mongoose": "^4.4.19"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-env": "^0.4.0",
+    "gulp-nodemon": "^2.0.7",
+    "mongoose": "^4.4.19"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Sebastian Mario Sandri (ssandri)",
+  "license": "ISC"
+}
