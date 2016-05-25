@@ -10,22 +10,22 @@ var suitesController = function(Suite) {
         var returnSuites = [];
         suites.forEach(function(element, index, array) {
           var newSuite = {};
-          var suite = element.toJSON();
-          newSuite.suite_id = suite._id;
-          newSuite.suite_name = suite.suite_name;
-          newSuite.suite_start = suite.suite_start;
-          newSuite.suite_finish = suite.suite_finish;
-          newSuite.suite_tested_url = suite.suite_tested_url;
-          newSuite.suite_passed = suite.suite_passed;
-          newSuite.suite_failed = suite.suite_failed;
-          newSuite.suite_skipped = suite.suite_skipped;
-          newSuite.suite_total = suite.suite_total;
+          var suiteFound = element.toJSON();
+          newSuite.suite_id = suiteFound._id;
+          newSuite.suite_name = suiteFound.suite_name;
+          newSuite.suite_start = suiteFound.suite_start;
+          newSuite.suite_finish = suiteFound.suite_finish;
+          newSuite.suite_tested_url = suiteFound.suite_tested_url;
+          newSuite.suite_passed = suiteFound.suite_passed;
+          newSuite.suite_failed = suiteFound.suite_failed;
+          newSuite.suite_skipped = suiteFound.suite_skipped;
+          newSuite.suite_total = suiteFound.suite_total;
           returnSuites.push(newSuite);
         });
-        if (returnSuites) {
-          res.json(returnSuites);
+        if (returnSuites.length == 0) {
+          res.status(404).json({ "errorMessage": "No test suites found in db" })
         } else {
-          res.status(500).json({ "errorMessage": "No test methods found in db" })
+          res.json(returnSuites);
         }
 
       }
@@ -37,6 +37,8 @@ var suitesController = function(Suite) {
     suite.save(function(err){
       if (err) {
         res.status(400).json(err);
+      } else {
+        res.status(201).set('Content-Location', 'http://' + req.headers.host + '/korriban-api/v1/suites/' + suite._id).send();
       }
     });
   }

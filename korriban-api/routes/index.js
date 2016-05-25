@@ -20,7 +20,7 @@ router.get('/korriban-api/v1/suites/:suiteId/tests', test.getTestInfo);
 */
 router.get('/korriban-api/v1/suites/:suiteId/tests/:testId/testMethods', testMethods.getTestMethods);
 router.get('/korriban-api/v1/testMethodHistory', testMethods.getHistory);
-router.get('/korriban-api/v1/testMethodStatus', testMethods.updateStatus);
-router.get('/korriban-api/v1/updateBugInfo', testMethods.updateBugInfo);
+router.patch('/korriban-api/v1/testMethodStatus', testMethods.updateStatus);
+router.patch('/korriban-api/v1/bugInfo', testMethods.updateBugInfo);
 
 module.exports = router;

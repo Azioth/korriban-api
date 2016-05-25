@@ -9,16 +9,16 @@ var suiteController = function(Suite) {
           res.status(500).send(err)
         } else if (suite) {
           var newSuite = {};
-          var suite = suite.toJSON();
-          newSuite.suite_id = suite._id;
-          newSuite.suite_name = suite.suite_name;
-          newSuite.suite_start = suite.suite_start;
-          newSuite.suite_finish = suite.suite_finish;
-          newSuite.suite_tested_url = suite.suite_tested_url;
-          newSuite.suite_passed = suite.suite_passed;
-          newSuite.suite_failed = suite.suite_failed;
-          newSuite.suite_skipped = suite.suite_skipped;
-          newSuite.suite_total = suite.suite_total;
+          var suiteFound = suite.toJSON();
+          newSuite.suite_id = suiteFound._id;
+          newSuite.suite_name = suiteFound.suite_name;
+          newSuite.suite_start = suiteFound.suite_start;
+          newSuite.suite_finish = suiteFound.suite_finish;
+          newSuite.suite_tested_url = suiteFound.suite_tested_url;
+          newSuite.suite_passed = suiteFound.suite_passed;
+          newSuite.suite_failed = suiteFound.suite_failed;
+          newSuite.suite_skipped = suiteFound.suite_skipped;
+          newSuite.suite_total = suiteFound.suite_total;
           res.json(newSuite);
         } else {
           res.status(404).json({ "errorMessage": "No suite found with id '" + req.params.suiteId + "'." });

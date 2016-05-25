@@ -10,7 +10,10 @@ var testMethods = function(Suite){
   var updateBugInfo = testMethodBugController.patch;
 
   return {
-    getTestMethods: getTestMethods
+    getTestMethods: getTestMethods,
+    getHistory: getHistory,
+    updateStatus: updateStatus,
+    updateBugInfo: updateBugInfo
   }
 };
 
