@@ -1,0 +1,19 @@
+{
+   "suite_id":358,
+   "suite_name":"InDemand Full Regression",
+   "suite_start":{
+      "date":"2016-05-23 00:17:19.000000",
+      "timezone_type":3,
+      "timezone":"America\/Los_Angeles"
+   },
+   "suite_finish":{
+      "date":"2016-05-23 03:57:20.000000",
+      "timezone_type":3,
+      "timezone":"America\/Los_Angeles"
+   },
+   "suite_tested_url":"https:\/\/qamgmt01.indemandterp.com\/",
+   "suite_passed":108,
+   "suite_failed":46,
+   "suite_skipped":0,
+   "suite_total":154
+}
