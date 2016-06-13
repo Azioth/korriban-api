@@ -42,11 +42,11 @@ var testMethods = new Schema({
 		required: true
 	},
   testmethod_start: {
-		type: Date,
+		type: String,
 		required: true
 	},
   testmethod_finish: {
-		type: Date,
+		type: String,
 		required: true
 	},
   testmethod_bug_url: {
@@ -66,11 +66,11 @@ var suiteTest = new Schema({
 		required: true
 	},
   test_start: {
-		type: Date,
+		type: String,
 		required: true
 	},
   test_finish: {
-		type: Date,
+		type: String,
 		required: true
 	},
   test_methods: {
@@ -86,11 +86,11 @@ var suiteModel = new Schema({
 		validate: requiredStringvalidator
 	},
   suite_start: {
-		type: Date,
+		type: String,
 		required: true
 	},
   suite_finish: {
-		type: Date,
+		type: String,
 		required: true
 	},
   suite_tested_url: {
