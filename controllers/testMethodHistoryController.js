@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var testMethodHistoryController = function(Suite){
 
   var get = function(req, res){

@@ -37,11 +37,8 @@ var suitesController = function(Suite) {
     suite.save(function(err){
       if (err) {
         res.status(400).json(err);
-<<<<<<< HEAD
       } else {
         res.status(201).set('Content-Location', 'http://' + req.headers.host + '/korriban-api/v1/suites/' + suite._id).send();
-=======
->>>>>>> 24e02b13b4a2f2b8f5649a040de3caa7de74112e
       }
     });
   }
